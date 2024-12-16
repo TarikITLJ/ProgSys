@@ -12,9 +12,11 @@
 int main() {
     const char *message = "$ ./enseash \nBienvenue dans la shell ENSEA. \nPour quitter, tapez 'exit'\n";
     char buf[SIZE];
-    write(STDOUT_FILENO, message, strlen(message));
+
+
+    write(STDOUT_FILENO, message, strlen(message)); // Write the introduction to the shell
     while(1){
-        write(STDOUT_FILENO,prompt, strlen(prompt));
+        write(STDOUT_FILENO,prompt, strlen(prompt)); // Writes the prompt enseash %
         read(STDIN_FILENO,buf,4097);
     }
     exit(EXIT_SUCCESS);
