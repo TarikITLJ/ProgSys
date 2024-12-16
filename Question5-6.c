@@ -55,6 +55,7 @@ int main() {
             exit(EXIT_SUCCESS);
         }
 
+
         int argc = 0;
         char *argv[SIZE] = {};
         char *token = strtok(buf, " ");
