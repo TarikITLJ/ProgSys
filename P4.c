@@ -7,6 +7,8 @@
 
 #define SIZE 4096
 
+
+
 int main() {
     char buf[SIZE];
     ssize_t bytes_read;
@@ -25,6 +27,10 @@ int main() {
         buf[bytes_read]='\0';
         buf[strcspn(buf,"\n")]='\0';
 
+if (strcmp(buf,"exit")==0){
+    write(STDOUT_FILENO,message_exit,strlen(message_exit));
+    exit(EXIT_SUCCESS);
+}
 
  int argc = 0;
     char *argv[SIZE] = {};
