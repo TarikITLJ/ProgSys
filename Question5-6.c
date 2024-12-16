@@ -44,7 +44,7 @@ int main() {
     write(STDOUT_FILENO, message, strlen(message));     // Write the introduction to the shell
 
     while(1){
-        printPrompt(last_status,duration);
+        printPrompt(last_status,duration); // prints the return of the previous command in the prompt and the duration
 
         bytes_read = read(STDIN_FILENO, buf, SIZE-1); // Reads the input command of the user
         buf[bytes_read]='\0';
