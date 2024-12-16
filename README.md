@@ -3,6 +3,8 @@
 ## Description
 
 ENSEASH is a minimalist shell implemented in C, providing a simple interface for executing commands on a Unix/Linux system. The shell displays an informative prompt that includes the return code or termination signal of the previous command and its execution duration in milliseconds. It supports basic command execution with arguments and allows the user to exit with the `exit` command. 
+
+
 Shell made by : RHINAOUI Mohamed Tarik , CHEIKH-SIDIYA Abdellahi
 
 ---
