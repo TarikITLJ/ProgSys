@@ -11,7 +11,6 @@
 int main() {
     char buf[SIZE];
     ssize_t bytes_read;
-    const char *prompt;
 
     const char *message = "$ ./enseash \nBienvenue dans la shell ENSEA. \nPour quitter, tapez 'exit'\n";
     write(STDOUT_FILENO, message, strlen(message));
@@ -28,7 +27,7 @@ int main() {
 
         if(strcmp(buf, "fortune")==0){
             if (0==fork()){
-                prompt = "fortune";
+                write(STDOUT_FILENO,)
                 execlp("/usr/games/fortune","fortune",NULL);
             }
             else{
@@ -37,7 +36,6 @@ int main() {
             }
         }
         else if (strcmp(buf,"exit")==0){
-            prompt = "exit";
             write(STDOUT_FILENO,message_exit,strlen(message_exit));
             exit(EXIT_SUCCESS);
         }
@@ -51,3 +49,4 @@ int main() {
     }
     exit(EXIT_SUCCESS);
 }
+

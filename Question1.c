@@ -5,11 +5,19 @@
 #include <stdio.h>
 #include <sys/wait.h>
 
-int main() {
-    const char *message = "$ ./enseash \nBienvenue dans la shell ENSEA. \nPour quitter, tapez 'exit' \nenseash %\n";
-    write(STDOUT_FILENO, message, strlen(message));
+#define prompt "enseash % "
+#define SIZE 4096
 
+int main() {
+    const char *message = "$ ./enseash \nBienvenue dans la shell ENSEA. \nPour quitter, tapez 'exit'\n";
+    char buf[SIZE];
+    write(STDOUT_FILENO, message, strlen(message));
+    while(1){
+        write(STDOUT_FILENO,prompt, strlen(prompt));
+        read(STDIN_FILENO,buf,4097);
+    }
     exit(EXIT_SUCCESS);
 
 }
+
 
