@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/wait.h>
 
+
 #define SIZE 4096
 
 void printPrompt(int status,long duration) {
